@@ -9,22 +9,14 @@ public class Student {
 		return studentName;
 	}
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [studentName=" + studentName + ", studentAddress=" + studentAddress + ", studentId=" + studentId
-				+ "]";
-	}
-
 	public String getStudentAddress() {
 		return studentAddress;
 	}
 
-	public void setStudentAddress(String studentAddress) {
-		this.studentAddress = studentAddress;
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
+				+ "]";
 	}
 
 	public int getStudentId() {
@@ -40,11 +32,17 @@ public class Student {
 
 	public Student() {
 		super();
-
 	}
 
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
 
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public void setStudentAddress(String studentAddress) {
+		this.studentAddress = studentAddress;
+	}
 }
