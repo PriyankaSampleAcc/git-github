@@ -32,7 +32,6 @@
 		</property>
 
 		<property name="courses">
-
 			<map>
 				<entry key="java" value="2 months" />
 				<entry key="c" value="1months" />
@@ -40,6 +39,7 @@
 				<entry key="python" value="3 months" />
 			</map>
 		</property>
+		
 		<property name="props">
 			<props>
 				<prop key="one">INDIA</prop>
