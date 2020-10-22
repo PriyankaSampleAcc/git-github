@@ -12,7 +12,7 @@
 	<bean class="com.springcore.ci.Certi" name="cer">
 		<constructor-arg value="Android Using Kotlin"></constructor-arg>
 	</bean>
-
+	
 	<bean class="com.springcore.ci.Person" name="person">
 		<constructor-arg value="Priyanka" />
 		<constructor-arg value="23" />
@@ -27,8 +27,8 @@
 			</list>
 		</constructor-arg>
 	</bean>
+	
 	<bean class="com.springcore.ci.Addition" name="addition">
-
 		<constructor-arg value="12" />
 		<constructor-arg value="34" />
 	</bean>
