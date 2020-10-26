@@ -9,6 +9,18 @@ public class Demo {
 	private int x;
 	@Value("#{1+97+23+22}")
 	private int y;
+	@Value("#{T(java.lang.Math).sqrt(144)}")
+	private int z;
+	@Value("#{ new java.lang.String('Priyanka')}")
+	private String name;
+
+	public int getZ() {
+		return z;
+	}
+
+	public void setZ(int z) {
+		this.z = z;
+	}
 
 	public int getX() {
 		return x;
@@ -28,7 +40,7 @@ public class Demo {
 
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ",name =" + name+"]";
 	}
 
 }
