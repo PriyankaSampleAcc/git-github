@@ -1,5 +1,6 @@
 package com.spring.jdbc.springjdbc;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
@@ -17,7 +18,13 @@ public class App {
 		System.out.println("Started ....");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/springjdbc/config.xml");
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-		Student student = studentDao.getStudent(123);
-		System.out.println(student);
+		List<Student> student = studentDao.getAllElements();
+		for (Student s : student) {
+			System.out.print(s.getId() + " ");
+			System.out.print(s.getName() + " ");
+			System.out.print(s.getCity() + " ");
+			System.out.println();
+
+		}
 	}
 }
