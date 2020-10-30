@@ -12,7 +12,7 @@
 
 	<servlet-mapping>
 		<servlet-name>first</servlet-name>
-		<url-pattern>/index</url-pattern>
+		<url-pattern>/web</url-pattern>
 		
 	</servlet-mapping>
 
