@@ -1,5 +1,5 @@
 
-package string;
+package allcodes;
 
 import java.util.Scanner;
 
