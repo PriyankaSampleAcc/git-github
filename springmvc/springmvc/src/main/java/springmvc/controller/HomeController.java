@@ -1,6 +1,8 @@
 package springmvc.controller;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +36,12 @@ public class HomeController {
 		modelAndView.addObject("name", "Priyankaa");
 		LocalDateTime time = LocalDateTime.now();
 		modelAndView.addObject("time", time);
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(124);
+		list.add(124);
+		list.add(124);
+		list.add(124);
+		modelAndView.addObject("marks",list);
 		return modelAndView;
 	}
 }
