@@ -14,14 +14,19 @@ import springmvc.model.User;
 @Controller
 public class ContactController {
 
+	public void commonDataForModel(Model model) {
+		model.addAttribute("Header", "Learn with Priyanka");
+		model.addAttribute("Desc", "Home for programmer");
+	}
+
 	@RequestMapping("/contact")
-	public String showForm() {
+	public String showForm(Model model) {
+		commonDataForModel(model);
 		return "contact";
 	}
 
 	@RequestMapping(path = "/processform", method = RequestMethod.POST)
 	public String handleForm(@ModelAttribute User user, Model model) {
-		System.out.println(user);
 		return "success";
 	}
 }
