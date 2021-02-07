@@ -17,13 +17,8 @@ public class App {
 		System.out.println("Hello ..");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/springjdbc/config.xml");
 		StudentDao stu = context.getBean("studentDao", StudentDao.class);
-		Student s = new Student();
-		// s.setId(1234);
-		// s.setCity("Nagpurr");
-		// s.setName("PBB");
-		// int r = stu.change(s);
-		// delete
-		int r = stu.delete(1234);
-		System.out.println(r + " rows deleted");
+		// get student info
+		Student ss = stu.getStudent(111);
+		System.out.println(ss);
 	}
 }
