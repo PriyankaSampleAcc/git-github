@@ -1,6 +1,9 @@
 package com.spring.jdbc.springjdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -15,10 +18,11 @@ import com.spring.jdbc.dao.StudentDaoImpl;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Hello ..");
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/springjdbc/config.xml");
-		StudentDao stu = context.getBean("studentDao", StudentDao.class);
-		// get student info
-		Student ss = stu.getStudent(111);
-		System.out.println(ss);
+		ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
+		StudentDaoImpl stu = context.getBean("sd", StudentDaoImpl.class);
+		List<Student> s = stu.getAllStudents();
+		for (Student student : s) {
+			System.out.println(student);
+		}
 	}
 }

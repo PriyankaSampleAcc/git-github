@@ -16,5 +16,4 @@ public class RowMapperImpl implements RowMapper<Student> {
 		student.setCity(rs.getString(3));
 		return student;
 	}
-
 }
