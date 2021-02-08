@@ -22,7 +22,7 @@ public class JdbcConfig {
 		return ds;
 	}
 
-	@Bean
+	@Bean(name = { "jdbcTemplate" })
 	public JdbcTemplate getTemplate() {
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 		jdbcTemplate.setDataSource(getDataSource());
